@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFitnessMood | calorie-tracker </title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="div-sitio" id="sitio">
+
+        <header class="header">
+            <div class="logo">
+                <img src="/img/IconoM.png" alt="My MyFitnessMood Logo">
+            </div>  
+            <nav class="nav">
+                <ul class="side-bar">      <!--Barra mobil responsive-->
+                    <li><ion-icon class="mobile-close-icon" name="close"></ion-icon></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><button class="btnLogin-popup">Iniciar Sesión</button></li>
+                </ul>
+                <ul class="bar"> 
+                    <li class="hideOnMobile"><a href="#">Planes</a></li>
+                    <li class="hideOnMobile"><a href="#">Inicio</a></li>
+                    <li class="hideOnMobile"><a href="#">Contacto</a></li>
+                    <li class="hideOnMobile"><button class="btnLogin-popup">Iniciar Sesión</button></li>
+                    <li class="mobile-menu-icon"><ion-icon name="menu"></ion-icon></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container" id="contenedor-principal">
+
+            <div class="wrapper"> <!--Asigne el wrapper dentro del div de la paginia para que al llamarlo siempre se centre y alinee con la pagina principal-->
+                <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                <div class="form-box login">
+                    <h2>Iniciar Sesión</h2>
+                    <form action="#">
+                        <div class="input-box">
+                              <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                              <input type="email" required>
+                              <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required>
+                            <label>Contraseña</label>
+                      </div>
+                      <div class="remember-forgot">
+                        <label><input type="checkbox">Recordar</label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                      </div>
+                      <button type="submit" class="btn-log">Ingresar</button>
+                      <div class="login-register">
+                        <p>¿Aún no tienes una cuenta?<a href="#" class="register-link"> Registrarse</a></p>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer-content">
+            <footer>
+                <div class="footer-content">
+                    <ul>
+                        <li class="li-elements">
+                            <a href="#none">Términos y condiciones de uso de MyFitnessMood</a>
+                        </li>
+                        <li>
+                            <a href="#none">Soporte</a>
+                        </li>
+                        <li>
+                            <a href="#none">Gestión de datos</a>
+                        </li>
+                        <li>
+                            <a href="#none">Políticas de privacidad</a>
+                        </li>
+                    </ul>
+                    <div class="backToTop">
+                        <a href="#sitio">
+                            <img src="/img/IconoM.png" alt="Volver arriba">
+                        </a>
+                    </div>                
+                    <div class="copyright">
+                        <a>© 2024 MyFitnessMood</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <script src="login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
