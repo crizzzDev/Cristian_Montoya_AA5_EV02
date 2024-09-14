@@ -1,36 +1,45 @@
+// Importa el hook useState de React para manejar el estado
 import { useState } from 'react'
-import './App.css'
+import './App.css' // Importa los estilos CSS
 
 function App() {
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [loggedIn, setloggedIn] = useState(false)
+  // Define los estados locales para el email, contraseña y si el usuario está logueado
+  const [email, setEmail] = useState('')       // Estado para el email
+  const [password, setPassword] = useState('') // Estado para la contraseña
+  const [loggedIn, setloggedIn] = useState(false) // Estado para saber si el usuario está logueado
   
 
- 
+  // Función para actualizar el estado del email cuando se cambia el valor en el input
   function changeEmail(event) {
-    setEmail(event.target.value)
+    setEmail(event.target.value) // Actualiza el estado 'email' con el valor ingresado
   }
 
+  // Función para actualizar el estado de la contraseña cuando se cambia el valor en el input
   function changePassword(event) {
-    setPassword(event.target.value)
+    setPassword(event.target.value) // Actualiza el estado 'password' con el valor ingresado
   }
 
-  async function logIn() {
-  const request = await fetch ('http://localhost:4000/login?email=&password=' + email + '&password=' + password)
+ // Función asíncrona que realiza la solicitud de inicio de sesión
+ async function logIn() {
+  // Realiza la solicitud al servidor para verificar el email y la contraseña
+  const request = await fetch ('http://localhost:4000/login?email=' + email + '&password=' + password)
   
-  if (request.ok) {
-    alert('usuario encontrado')
-    setloggedIn(true)
-  } else {
-    alert('usuario no registado')
-  }
+    // Verifica si la respuesta fue exitosa (usuario encontrado)
+    if (request.ok) {
+      alert('usuario encontrado') // Muestra una alerta si el usuario fue encontrado
+      setloggedIn(true) // Actualiza el estado a 'loggedIn' como verdadero
+    } else {
+      alert('usuario no registado') // Muestra una alerta si el usuario no fue encontrado
+    }
 
-  console.log('loggedIn state:', loggedIn);
-  if (loggedIn) {
-    return <principal/>;
-  }
+    // Imprime el estado de 'loggedIn' para depuración
+    console.log('loggedIn state:', loggedIn);
+
+    // Si el usuario está logueado, devuelve el componente 'principal' (debería definirse)
+    if (loggedIn) {
+      return <principal/>;
+    }
   }
   
   return (
