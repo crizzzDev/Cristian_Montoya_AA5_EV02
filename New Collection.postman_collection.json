@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "acb3d6f0-35e9-44be-bbad-a87f259a5aaa",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38353258"
+	},
+	"item": [
+		{
+			"name": "AA5-EV02 API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
