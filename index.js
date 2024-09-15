@@ -47,7 +47,9 @@ app.get('/login', async (req, res) => {
 });
 
 
-
+app.get('/validate',(req,res)=>{
+  res.send('sesion validada')
+})
 
 // Iniciar el servidor
 app.listen(4000)
