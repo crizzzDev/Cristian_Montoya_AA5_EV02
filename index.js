@@ -46,7 +46,8 @@ app.get('/login', async (req, res) => {
   }
 });
 
-
+// Define una ruta en el servidor para manejar las solicitudes GET a '/validate'.
+// Cuando un cliente realiza una solicitud GET a esta ruta, el servidor responde con el texto 'sesion validada'.
 app.get('/validate',(req,res)=>{
   res.send('sesion validada')
 })
